@@ -6,7 +6,7 @@
 
 ## What this agent does
 
-The agent is available inside **M365 Copilot Chat** and **Microsoft Word on the Web** (via the Copilot sidebar). Colleagues can ask it compliance questions in plain language and receive structured, business-readable answers with relevant article references.
+The agent is available inside **M365 Copilot Chat**, **Microsoft Word** (via the Copilot sidebar), and as a **standalone agent experience**. Colleagues can ask compliance questions in plain language and receive structured, business-readable answers with relevant article references.
 
 The agent uses 9 specialised MCP tools — it never answers EU AI Act questions from generic model knowledge when a relevant tool is available.
 
@@ -158,6 +158,12 @@ See [docs/deployment.md](docs/deployment.md) for the complete step-by-step guide
 ---
 
 ## Screenshots
+
+### Standalone agent
+
+The agent can also be used as a standalone experience.
+
+![EU AI Act standalone agent](media/stand-alone-agent.png)
 
 ### Teams conversations (add-in agent)
 

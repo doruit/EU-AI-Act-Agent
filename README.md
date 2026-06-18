@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/agent-repo-banner.png" alt="EU Artificial Intelligence Act" width="420">
+  <img src="media/agent-repo-banner.png" alt="EU Artificial Intelligence Act" width="100%">
 </p>
 
 # EU AI Act Compliance Agent for Microsoft 365 Copilot

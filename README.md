@@ -157,6 +157,22 @@ See [docs/deployment.md](docs/deployment.md) for the complete step-by-step guide
 
 ---
 
+## Screenshots
+
+### Teams conversations (add-in agent)
+
+Use the agent directly in Teams conversations.
+
+![EU AI Act agent in Teams conversation](media/add-in-agent.png)
+
+### Office apps like Word (agent selection flow)
+
+This screenshot shows how to use/select the agent in Office apps such as Microsoft Word.
+
+![EU AI Act agent in Office apps like Word](media/word-add-in-agent.png)
+
+---
+
 ## Testing
 
 See [tests/test-cases.md](tests/test-cases.md) for 32 test prompts covering:

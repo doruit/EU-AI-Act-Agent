@@ -190,6 +190,15 @@ See [tests/test-cases.md](tests/test-cases.md) for 32 test prompts covering:
 
 Use VS Code Developer Mode (F5) to verify tool routing and log results.
 
+### Inspecting tool calls with Developer Mode
+
+In M365 Copilot you can toggle **Developer Mode** on and off to see exactly how the agent performs **tool calling** — which MCP tool is selected, the inputs sent, and the raw response. This is the fastest way to verify routing during testing.
+
+- Turn it on by sending `-developer on` in the agent chat, and off with `-developer off`.
+- With Developer Mode on, each response shows the selected tool and call details.
+
+![Developer Mode showing EU AI Act agent tool calling](media/tool-calling.png)
+
 ---
 
 ## Customisation

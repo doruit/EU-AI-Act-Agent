@@ -6,8 +6,6 @@
       "type": "msedge",
       "request": "launch",
       "url": "https://m365.cloud.microsoft/chat",
-      "userDataDir": "",
-      "profile": "Profile 1",
       "presentation": {
         "group": "all",
         "order": 1

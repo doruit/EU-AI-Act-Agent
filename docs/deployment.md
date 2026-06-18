@@ -79,15 +79,17 @@ This step creates the Teams app registration in the M365 Developer Portal and ge
 1. Press **F5** in VS Code (or select **Run → Start Debugging**)
 2. Choose **Preview in Microsoft 365 Copilot (Edge)**
 3. Your browser opens `https://m365.cloud.microsoft/chat`
-4. Find **EU AI Act Compliance Agent** in the Copilot sidebar (☰ → agent list)
-5. Test with prompts from `tests/test-cases.md`
-6. Use the browser DevTools or Agents Toolkit output panel to inspect which tool was called
+4. In Copilot, click the **controls/settings icon with two sliders** to open the agent list (not the hamburger icon)
+5. Select **EU AI Act Compliance Agent**
+6. Test with prompts from `tests/test-cases.md`
+7. Use the browser DevTools or Agents Toolkit output panel to inspect which tool was called
 
-**Test in Word on the Web:**
-1. Use the **Preview in Word on the Web (Edge)** launch configuration
-2. Open any Word document (or create a new one)
-3. Click **Copilot** in the ribbon → ☰ → **EU AI Act Compliance Agent**
-4. Try: *"Scan this document and identify EU AI Act compliance gaps"*
+**Test in Microsoft Word:**
+1. Open any Word document (desktop or web)
+2. Open the **Copilot** pane
+3. Click the **controls/settings icon with two sliders** (not the hamburger icon)
+4. Select **EU AI Act Compliance Agent**
+5. Try: *"Scan this document and identify EU AI Act compliance gaps"*
 
 ---
 
@@ -107,7 +109,7 @@ This step submits the app to the M365 Admin Center for internal distribution.
 
 After approval, the agent appears automatically in:
 - M365 Copilot Chat (`https://m365.cloud.microsoft/chat`)
-- Word on the Web (`https://word.cloud.microsoft`)
+- Microsoft Word
 - Teams, Outlook, PowerPoint (same deployment, no extra steps)
 
 ---

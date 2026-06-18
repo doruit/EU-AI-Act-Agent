@@ -5,7 +5,7 @@ the agent selects the correct tool for each question. Test in VS Code Developer 
 and log the selected tool, MCP inputs, and final answer for each case.
 
 **How to use this file**
-1. Open the agent in M365 Copilot Chat (`https://m365.cloud.microsoft/chat`) or Word on the Web.
+1. Open the agent in M365 Copilot Chat (`https://m365.cloud.microsoft/chat`) or Microsoft Word.
 2. Send each prompt below.
 3. Check the developer pane (F12 / Agents Toolkit debug view) to confirm which tool was called.
 4. Record the result in the Status column.

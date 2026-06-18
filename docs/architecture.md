@@ -6,10 +6,10 @@ The EU AI Act Compliance Agent is a **Microsoft 365 Declarative Agent** that int
 
 It is surfaced inside:
 - **M365 Copilot Chat** (`https://m365.cloud.microsoft/chat`)
-- **Microsoft Word on the Web** (`https://word.cloud.microsoft`) — via the Copilot sidebar
+- **Microsoft Word** (desktop and web) — via the Copilot sidebar
 
 ```
-User (M365 Copilot Chat / Word on the Web)
+User (M365 Copilot Chat / Microsoft Word)
        │
        ▼
 ┌──────────────────────────────────────────────┐
@@ -128,19 +128,19 @@ A static snapshot of the MCP server's `tools/list` response, bundled into the ap
 
 ---
 
-### 5. Word on the Web Integration
+### 5. Microsoft Word Integration
 
-No extra manifest configuration is required for Word on the Web. Once the agent is deployed to your M365 tenant, it automatically appears in the **Copilot sidebar** of Word on the Web:
+No extra manifest configuration is required for Word. Once the agent is deployed to your M365 tenant, it appears in the **Copilot sidebar** in Microsoft Word.
 
-1. Open Word on the Web (`https://word.cloud.microsoft`)
-2. Click **Copilot** in the ribbon
-3. Click the **hamburger menu** (☰) in the Copilot pane
+1. Open any document in **Microsoft Word** (desktop or web)
+2. Open the **Copilot** pane
+3. Click the **controls/settings icon with two sliders** (not the hamburger menu)
 4. Select **EU AI Act Compliance Agent**
 
 **Document workflow (demo):**
-Since live document reading in Word is a preview-only feature (Windows-only, not yet macOS), the recommended workflow for the demo is:
+For predictable results, the recommended workflow for the demo is:
 1. Upload the document to OneDrive/SharePoint
-2. Open it in Word on the Web
+2. Open it in Microsoft Word
 3. Copy the relevant sections and paste into the agent, or reference the document URL
 4. The agent uses `OneDriveAndSharePoint` grounding to retrieve the document content
 

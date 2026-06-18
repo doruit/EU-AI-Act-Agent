@@ -141,16 +141,17 @@ code .
 # 3. Agents Toolkit → Lifecycle → Provision → then F5 to preview
 ```
 
-See [docs/deployment.md](docs/deployment.md) for the complete step-by-step guide including Word on the Web setup, SharePoint scoping, and publishing to the org catalog.
+See [docs/deployment.md](docs/deployment.md) for the complete step-by-step guide including Microsoft Word setup, SharePoint scoping, and publishing to the org catalog.
 
 ---
 
-## Using the agent in Word on the Web
+## Using the agent in Microsoft Word
 
-1. Open any document at [word.cloud.microsoft](https://word.cloud.microsoft)
-2. Click **Copilot** in the ribbon
-3. Click **☰** (hamburger) → **EU AI Act Compliance Agent**
-4. Ask: *"Scan this document and identify EU AI Act compliance gaps."*
+1. Open any document in **Microsoft Word** (desktop or web)
+2. Open the **Copilot** pane
+3. Click the **controls/settings icon with two sliders** to open agent selection (**not** the hamburger icon)
+4. Select **EU AI Act Compliance Agent**
+5. Ask: *"Scan this document and identify EU AI Act compliance gaps."*
 
 > **Note:** The agent uses `OneDriveAndSharePoint` grounding to search your organization's SharePoint and OneDrive content. For the best results on a specific document, upload it to SharePoint/OneDrive first.
 

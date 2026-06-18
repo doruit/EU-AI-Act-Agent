@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "eu-ai-act": {
+      "url": "https://eu-ai-act--lexbeam-software.run.tools",
+      "description": "Lexbeam EU AI Act MCP server — provides 9 tools for EU AI Act compliance: risk classification, deadlines, obligations, FAQ, penalty calculation, article retrieval, GPAI systemic risk, Article 6(3) exception, and Annex IV documentation checklist. No authentication required."
+    }
+  }
+}

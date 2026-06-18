@@ -1,0 +1,67 @@
+{
+  "schema_version": "v2.4",
+  "name_for_human": "EU AI Act Compliance",
+  "namespace": "euaiact",
+  "description_for_human": "EU AI Act compliance tools: risk classification, deadlines, obligations, penalties, and documentation.",
+  "description_for_model": "Use this plugin for ALL questions related to EU AI Act (Regulation 2024/1689). This plugin must be selected for: classifying AI systems by risk level (prohibited, high-risk, limited-risk, minimal-risk); checking implementation deadlines and milestones; identifying obligations for providers, deployers, importers, or distributors; answering general EU AI Act questions and definitions; retrieving specific article text or EUR-Lex references; calculating maximum fines and penalties; assessing GPAI or foundation model systemic risk; evaluating the Article 6(3) no-significant-risk exception for Annex III systems; generating Annex IV technical documentation checklists. Do not answer these questions from general model knowledge — always use the appropriate tool from this plugin.",
+  "functions": [
+    {
+      "name": "euaiact_classify_system",
+      "description": "Classifies an AI system's risk level under EU AI Act Regulation 2024/1689. Returns risk category (Prohibited, High-risk, Limited-risk, Minimal-risk), applicable Annex III category, relevant articles, provider/deployer role determination, and follow-up questions. Use whenever the user asks to classify a system, assess risk, determine if an AI system is high-risk, scan a use case or document for EU AI Act risks, or determine if a system falls under the EU AI Act."
+    },
+    {
+      "name": "euaiact_check_deadlines",
+      "description": "Returns all EU AI Act implementation milestones with days remaining. Includes next upcoming milestone and Digital Omnibus proposal status. Use whenever the user asks about compliance deadlines, applicability dates, transition periods, when obligations apply, or how much time remains to comply."
+    },
+    {
+      "name": "euaiact_get_obligations",
+      "description": "Returns specific compliance obligations for a given role (provider, deployer, importer, distributor, product manufacturer) and risk level. Use whenever the user asks what obligations apply to their organization, what a provider or deployer must do, or how obligations differ between roles."
+    },
+    {
+      "name": "euaiact_answer_question",
+      "description": "Searches the EU AI Act FAQ corpus and returns best-match answers with article references. Use for general questions, definitions, and explanations about the EU AI Act, such as 'what is the EU AI Act', 'what does high-risk mean', 'what is the difference between provider and deployer', or any question without a specific article number."
+    },
+    {
+      "name": "euaiact_calculate_penalty",
+      "description": "Calculates the maximum fine under Article 99 given violation type, global annual turnover, and SME status. Includes SME/startup reduction comparison under Article 99(6). Use whenever the user asks about fines, sanctions, maximum penalty exposure, or financial consequences of non-compliance."
+    },
+    {
+      "name": "euaiact_get_article",
+      "description": "Retrieves an operational summary of a specific EU AI Act article and a stable EUR-Lex canonical URL. Supported articles: 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15, 16, 17, 26, 27, 43, 47, 49, 50, 51, 53, 55, 72, 73, 99, 100, 113. Use when the user asks for a specific article by number, requests legal basis, or asks for the text of a particular provision."
+    },
+    {
+      "name": "euaiact_check_gpai_systemic_risk",
+      "description": "Determines whether a GPAI model qualifies as systemic risk under Article 51 (threshold: 10^25 FLOPs or Commission designation). Returns Article 53 baseline obligations plus Article 55 systemic-risk-only obligations and Article 52 notification duty. Use for questions about general-purpose AI models, foundation models, GPAI obligations, systemic risk, high-impact capabilities, or compute thresholds."
+    },
+    {
+      "name": "euaiact_assess_art6_3_exception",
+      "description": "Evaluates whether an Annex III high-risk AI system may qualify for the Article 6(3) no-significant-risk exception, avoiding high-risk classification obligations. Validates the four required conditions and flags the profiling prohibition blocker. Use when the user asks about the no-significant-risk exception, Article 6(3), avoiding high-risk classification, or arguing that a system does not materially affect people."
+    },
+    {
+      "name": "euaiact_annex_iv_checklist",
+      "description": "Returns the full Annex IV technical documentation requirements (9 items) for high-risk AI providers under Article 11. Supports markdown checklist format for compliance audits. Use when the user asks what technical documentation is needed, requests an Annex IV checklist, asks about Article 11 requirements, or wants to identify missing documentation."
+    }
+  ],
+  "runtimes": [
+    {
+      "type": "RemoteMCPServer",
+      "auth": {
+        "type": "None"
+      },
+      "run_for_functions": [
+        "euaiact_classify_system",
+        "euaiact_check_deadlines",
+        "euaiact_get_obligations",
+        "euaiact_answer_question",
+        "euaiact_calculate_penalty",
+        "euaiact_get_article",
+        "euaiact_check_gpai_systemic_risk",
+        "euaiact_assess_art6_3_exception",
+        "euaiact_annex_iv_checklist"
+      ],
+      "spec": {
+        "url": "https://eu-ai-act--lexbeam-software.run.tools"
+      }
+    }
+  ]
+}

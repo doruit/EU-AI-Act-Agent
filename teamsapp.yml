@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=https://aka.ms/m365-agents-toolkits/v1.11/yaml.schema.json
+# Visit https://aka.ms/teamsfx-v5.0-guide for details on this file
+# Visit https://aka.ms/teamsfx-actions for details on actions
+version: v1.11
+
+environmentFolderPath: ./env
+
+projectId: 5dcbd672-fada-4327-b293-695e392047cf
+
+provision:
+  - uses: teamsApp/create
+    with:
+      name: EU-AI-Act-Agent-${{TEAMSFX_ENV}}
+    writeToEnvironmentFile:
+      teamsAppId: TEAMS_APP_ID
+
+  - uses: teamsApp/zipAppPackage
+    with:
+      manifestPath: ./appPackage/manifest.json
+      outputZipPath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
+      outputFolder: ./appPackage/build
+
+  - uses: teamsApp/update
+    with:
+      appPackagePath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
+
+deploy:
+  - uses: teamsApp/zipAppPackage
+    with:
+      manifestPath: ./appPackage/manifest.json
+      outputZipPath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
+      outputFolder: ./appPackage/build
+
+  - uses: teamsApp/update
+    with:
+      appPackagePath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
+
+publish:
+  - uses: teamsApp/zipAppPackage
+    with:
+      manifestPath: ./appPackage/manifest.json
+      outputZipPath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
+      outputFolder: ./appPackage/build
+
+  - uses: teamsApp/publishAppPackage
+    with:
+      appPackagePath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
+    writeToEnvironmentFile:
+      publishedAppId: TEAMS_APP_PUBLISHED_APP_ID

@@ -1,0 +1,26 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "appPackage/manifest.json"
+      ],
+      "url": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.18/MicrosoftTeams.schema.json"
+    },
+    {
+      "fileMatch": [
+        "appPackage/declarativeAgent.json"
+      ],
+      "url": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json"
+    },
+    {
+      "fileMatch": [
+        "appPackage/ai-plugin.json"
+      ],
+      "url": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json"
+    }
+  ],
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "appPackage/build": true
+  }
+}

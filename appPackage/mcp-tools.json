@@ -1,0 +1,214 @@
+[
+  {
+    "name": "euaiact_classify_system",
+    "description": "Classify an AI system's risk level under EU AI Act Regulation 2024/1689. Returns risk category, applicable Annex III category, relevant articles, provider/deployer role determination, and recommended follow-up actions.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Free-text description of the AI system, its purpose, and how it works."
+        },
+        "use_case": {
+          "type": "string",
+          "description": "The intended use case or deployment context of the AI system."
+        },
+        "domain": {
+          "type": "string",
+          "description": "The sector or domain of deployment (e.g., healthcare, HR, law enforcement, education, finance)."
+        },
+        "biometric": {
+          "type": "boolean",
+          "description": "Whether the system involves biometric identification or categorisation."
+        },
+        "synthetic_content": {
+          "type": "boolean",
+          "description": "Whether the system generates synthetic content (text, images, audio, video, code)."
+        }
+      },
+      "required": [
+        "description"
+      ]
+    }
+  },
+  {
+    "name": "euaiact_check_deadlines",
+    "description": "Returns all EU AI Act implementation milestones with days remaining from today. Includes the next upcoming milestone and Digital Omnibus simplification proposal status.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "only_upcoming": {
+          "type": "boolean",
+          "description": "If true, return only future milestones (not past ones). Default: false."
+        }
+      }
+    }
+  },
+  {
+    "name": "euaiact_get_obligations",
+    "description": "Returns specific EU AI Act compliance obligations for a given role and risk level.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": [
+            "provider",
+            "deployer",
+            "importer",
+            "distributor",
+            "product_manufacturer",
+            "authorized_representative"
+          ],
+          "description": "The organization's role in the AI value chain."
+        },
+        "risk_level": {
+          "type": "string",
+          "enum": [
+            "prohibited",
+            "high_risk",
+            "limited_risk",
+            "minimal_risk",
+            "gpai"
+          ],
+          "description": "The risk classification of the AI system."
+        }
+      },
+      "required": [
+        "role",
+        "risk_level"
+      ]
+    }
+  },
+  {
+    "name": "euaiact_answer_question",
+    "description": "Search the EU AI Act FAQ corpus for answers to general compliance questions. Returns best-match answers with relevant article references.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "description": "The compliance question to search for in the FAQ corpus."
+        }
+      },
+      "required": [
+        "question"
+      ]
+    }
+  },
+  {
+    "name": "euaiact_calculate_penalty",
+    "description": "Calculate the maximum fine under EU AI Act Article 99 based on violation type, global annual turnover, and SME status.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "violation_type": {
+          "type": "string",
+          "enum": [
+            "prohibited_practice",
+            "high_risk_non_compliance",
+            "incorrect_information",
+            "other"
+          ],
+          "description": "Category of the EU AI Act violation."
+        },
+        "annual_turnover_eur": {
+          "type": "number",
+          "description": "Global annual turnover of the organization in EUR."
+        },
+        "is_sme": {
+          "type": "boolean",
+          "description": "Whether the organization qualifies as an SME or startup under EU law."
+        }
+      },
+      "required": [
+        "violation_type"
+      ]
+    }
+  },
+  {
+    "name": "euaiact_get_article",
+    "description": "Retrieve an operational summary and stable EUR-Lex URL for a specific EU AI Act article. Supported: 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15, 16, 17, 26, 27, 43, 47, 49, 50, 51, 53, 55, 72, 73, 99, 100, 113.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "article_number": {
+          "type": "integer",
+          "description": "The EU AI Act article number to retrieve."
+        }
+      },
+      "required": [
+        "article_number"
+      ]
+    }
+  },
+  {
+    "name": "euaiact_check_gpai_systemic_risk",
+    "description": "Determine whether a general-purpose AI (GPAI) model qualifies as systemic risk under Article 51 (threshold: ≥10^25 FLOPs or Commission designation). Returns applicable obligations under Articles 52, 53, and 55.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "model_name": {
+          "type": "string",
+          "description": "Name or identifier of the GPAI model."
+        },
+        "training_compute_flops": {
+          "type": "number",
+          "description": "Training compute in FLOPs (floating-point operations). Threshold for systemic risk: 10^25."
+        },
+        "description": {
+          "type": "string",
+          "description": "Free-text description of the model's capabilities, training approach, and intended use."
+        }
+      },
+      "required": [
+        "description"
+      ]
+    }
+  },
+  {
+    "name": "euaiact_assess_art6_3_exception",
+    "description": "Assess whether an Annex III AI system qualifies for the Article 6(3) no-significant-risk exception, which would exempt it from high-risk obligations. Validates the four required conditions and flags blockers such as the profiling prohibition.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Description of the AI system and its deployment context."
+        },
+        "annex_iii_category": {
+          "type": "string",
+          "description": "The applicable Annex III category (e.g., 'employment_workers_management', 'education_vocational_training')."
+        },
+        "involves_profiling": {
+          "type": "boolean",
+          "description": "Whether the system involves profiling of natural persons as defined in GDPR Article 4(4)."
+        }
+      },
+      "required": [
+        "description"
+      ]
+    }
+  },
+  {
+    "name": "euaiact_annex_iv_checklist",
+    "description": "Return the complete Annex IV technical documentation requirements (9 items) for high-risk AI providers under Article 11. Optionally returns a markdown checklist format for use in compliance audits.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": [
+            "list",
+            "checklist"
+          ],
+          "description": "Output format: 'list' for plain text, 'checklist' for a markdown checkbox audit checklist. Default: 'checklist'."
+        },
+        "system_description": {
+          "type": "string",
+          "description": "Optional description of the AI system, used to tailor the checklist to the specific context."
+        }
+      }
+    }
+  }
+]

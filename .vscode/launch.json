@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Preview in Microsoft 365 Copilot (Edge)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "https://m365.cloud.microsoft/chat",
+      "userDataDir": "",
+      "profile": "Profile 1",
+      "presentation": {
+        "group": "all",
+        "order": 1
+      },
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Preview in Microsoft 365 Copilot (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://m365.cloud.microsoft/chat",
+      "presentation": {
+        "group": "all",
+        "order": 2
+      },
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Preview in Word on the Web (Edge)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "https://word.cloud.microsoft",
+      "presentation": {
+        "group": "all",
+        "order": 3
+      },
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

@@ -138,6 +138,8 @@ See [docs/architecture.md](docs/architecture.md) for the full component breakdow
 - **Not a guarantee of compliance** — it structures analysis; it does not certify outcomes.
 - **Not a write/remediation agent** — it advises; it does not change your systems or documents.
 
+> **No human-in-the-loop (HITL) or human-on-the-loop (HOTL) controls are built into this agent.** It does not pause for approval, escalate to a reviewer, or enforce sign-off. When agents like this are used in EU AI Act assessments or compliance scenarios, HITL and/or HOTL oversight is **strongly advised** and must be designed into your surrounding process. **This agent does not replace human judgement.**
+
 ---
 
 ## Quick start

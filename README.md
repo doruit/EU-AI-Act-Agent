@@ -1,6 +1,8 @@
 # EU AI Act Compliance Agent for Microsoft 365 Copilot
 
-> A **Microsoft 365 Declarative Agent** that helps your organization understand and comply with EU AI Act Regulation (EU) 2024/1689 — currently using the online free/tryout [Lexbeam EU AI Act MCP server](https://smithery.ai/servers/lexbeam-software/eu-ai-act).
+> A **Microsoft 365 Declarative Agent** that helps your organization understand and comply with EU AI Act Regulation (EU) 2024/1689.
+>
+> To make it easy to experience, this agent connects out-of-the-box to the **free, hosted [Lexbeam EU AI Act MCP server](https://smithery.ai/servers/lexbeam-software/eu-ai-act)** — no setup required. Once you start working with real or sensitive data, host your own MCP server using the [open-source server repo](https://github.com/lexbeam-software/eu-ai-act-mcp).
 
 ---
 

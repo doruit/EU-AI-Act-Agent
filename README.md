@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="media/EU_AI_Act_logo_main.png" alt="EU Artificial Intelligence Act" width="420">
+</p>
+
 # EU AI Act Compliance Agent for Microsoft 365 Copilot
 
 Ask EU AI Act questions directly inside Microsoft 365 Copilot, Word, Teams, and standalone agent experiences — backed by dedicated EU AI Act MCP tools instead of generic model knowledge.

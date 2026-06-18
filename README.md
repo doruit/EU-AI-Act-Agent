@@ -104,6 +104,22 @@ The agent integrates these 9 tools from the [Lexbeam EU AI Act MCP server](https
 
 ---
 
+## Swap in your own MCP server (same functionality)
+
+The current hosted Lexbeam MCP endpoint can be replaced with **your own MCP server** that provides the exact same EU AI Act tools.
+
+Use the official open-source implementation:
+- https://github.com/lexbeam-software/eu-ai-act-mcp
+
+If your self-hosted server keeps the same `euaiact_*` tool names and schemas, this agent works the same way. In this repo, you only need to update the MCP endpoint URL in:
+
+- `appPackage/ai-plugin.json` → `runtimes[0].spec.url`
+- `.vscode/mcp.json` → `servers.eu-ai-act.url`
+
+Then refresh tool metadata (if needed) and re-provision/re-deploy.
+
+---
+
 ## Quick start
 
 ### Prerequisites

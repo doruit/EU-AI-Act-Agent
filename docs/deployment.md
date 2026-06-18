@@ -134,6 +134,25 @@ By default, the `OneDriveAndSharePoint` capability is unscoped — the agent can
 
 ---
 
+## Step 9 — (Optional) Swap Lexbeam hosted MCP with your own server
+
+You can run your own EU AI Act MCP backend with the same functionality using:
+
+- https://github.com/lexbeam-software/eu-ai-act-mcp
+
+Then point this agent to your endpoint:
+
+1. Update `appPackage/ai-plugin.json`:
+  - `runtimes[0].spec.url` → your MCP server URL
+2. Update `.vscode/mcp.json`:
+  - `servers.eu-ai-act.url` → the same URL
+3. (Recommended) Re-fetch MCP actions/tools in Agents Toolkit
+4. Re-run **Provision** (if required by your environment) and **Deploy/Publish**
+
+If your server keeps the same `euaiact_*` tool names and schemas, no routing logic changes are required in `declarativeAgent.json`.
+
+---
+
 ## Updating the agent
 
 After making changes to `declarativeAgent.json`, `ai-plugin.json`, or `mcp-tools.json`:

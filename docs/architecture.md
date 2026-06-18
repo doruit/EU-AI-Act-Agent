@@ -110,6 +110,14 @@ Wires the M365 Copilot orchestrator to the Lexbeam MCP server via the `RemoteMCP
 
 The `description_for_model` field (~2,048 chars max) is the primary signal that tells the orchestrator to select this plugin. It lists all 9 tool domains explicitly.
 
+### Swappable MCP backend
+
+The hosted Lexbeam MCP endpoint is not hard-wired. You can replace it with your own deployment built from:
+
+- https://github.com/lexbeam-software/eu-ai-act-mcp
+
+As long as your server preserves the same `euaiact_*` tool names and input/output contracts, the declarative agent routing logic remains unchanged and behaviour is functionally equivalent.
+
 ---
 
 ### 4. `appPackage/mcp-tools.json` — MCP Tool Descriptions

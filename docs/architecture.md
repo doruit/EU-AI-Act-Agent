@@ -179,6 +179,9 @@ Every agent response follows this structure:
 - The MCP server is **read-only** — it returns regulatory content, not user data.
 - No user data is stored by the MCP server. All inputs are transient.
 - The Lexbeam MCP server is publicly hosted and free; no API key is transmitted.
+- This project uses the hosted Lexbeam endpoint as a practical default to try the agent quickly.
+- Prompts and tool inputs are sent to the configured MCP endpoint; evaluate this against your internal privacy requirements.
+- For strict data privacy requirements, deploy your own endpoint using: https://github.com/lexbeam-software/eu-ai-act-mcp
 - SharePoint grounding respects the **authenticated user's M365 permissions** — the agent cannot access files the user cannot access.
 - The agent is deployed for **internal use only** via the M365 Admin Center org catalog.
 

@@ -227,6 +227,13 @@ python scripts/generate-icons.py
 
 The [Lexbeam EU AI Act MCP server](https://smithery.ai/servers/lexbeam-software/eu-ai-act) is published by [Lexbeam Software](https://www.lexbeam.com) and covers EU AI Act Regulation (EU) 2024/1689 in full, including the Digital Omnibus simplification proposal.
 
+This repository currently uses the hosted Lexbeam MCP endpoint as a quick way to try the agent.
+
+> **Data privacy notice:** Prompts and tool inputs are sent to the configured MCP endpoint for processing. If data privacy is critical for your organization, run your own MCP endpoint instead of using the public hosted endpoint.
+
+You can self-host equivalent functionality using Lexbeam's open-source server implementation:
+- https://github.com/lexbeam-software/eu-ai-act-mcp
+
 - **Free** — no API key required
 - **Quality score:** 97/100 (Smithery)
 - **Avg latency:** ~107ms

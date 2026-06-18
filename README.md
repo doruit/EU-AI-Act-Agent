@@ -76,10 +76,6 @@ These map to real enterprise situations — messy intake, vendor claims, interna
 
 ![EU AI Act agent in Office apps like Word](media/word-add-in-agent.png)
 
-**Developer Mode** — see exactly which MCP tool was called, with inputs and the raw response.
-
-![Developer Mode showing EU AI Act tool calling](media/tool-calling.png)
-
 ---
 
 ## Demo vs enterprise use
